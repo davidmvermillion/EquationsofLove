@@ -3,7 +3,7 @@ rm(list=ls())
 library(tidyverse)
 
 
-t <- seq(-1,1,0.1)
+t <- seq(-1,1,0.01)
 x <- 16*0.25*(3*sin(t) - sin(3*t))
 y <- 13*cos(t) - 5*cos(2*t) - cos(4*t)
 
@@ -11,8 +11,12 @@ Heart1 <- tibble(x,y)
 
 Heart1Plot <- Heart1 %>% 
   ggplot(aes(x,y)) +
-  geom_line()
+  geom_line() +
+  coord_polar(start = pi)
 Heart1Plot
+
+
+r <- 2 - 2*sin(t)
 
 # Proving Functionality ---------------------------------------------------
 
@@ -79,3 +83,5 @@ for(ll in c("","x","y","xy"))
 # https://www.math.ucla.edu/~anderson/rw1001/library/base/html/curve.html
 # https://www.math.ucla.edu/~anderson/rw1001/library/base/html/splinefun.html
 # https://www.math.ucla.edu/~anderson/rw1001/library/base/html/par.html
+# https://ggplot2.tidyverse.org/reference/coord_polar.html
+# https://stackoverflow.com/questions/39773933/how-to-get-a-really-periodic-polar-surface-plot-with-ggplot

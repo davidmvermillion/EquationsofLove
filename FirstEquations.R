@@ -50,6 +50,20 @@ LPlot <- L %>%
 LPlot
 
 
+# Plot O ------------------------------------------------------------------
+
+x3 <- seq(-3, 3, 0.1)
+y3.1 <- sqrt(9-(x3^2))
+y3.2 <- -sqrt(9-x3^2)
+O <- tibble(x3, y3.1, y3.2)
+
+OPlot <- O %>% 
+  ggplot(aes(x3 ,y3.1)) +
+  geom_line() +
+  ggplot(aes(x3, y3.2)) +
+  geom_line()
+OPlot
+
 # Hearts ------------------------------------------------------------------
 
 Heart1 <- tibble(x,y)
@@ -155,3 +169,4 @@ for(ll in c("","x","y","xy"))
 # https://stackoverflow.com/questions/39773933/how-to-get-a-really-periodic-polar-surface-plot-with-ggplot
 # http://sape.inf.usi.ch/quick-reference/ggplot2/geom_errorbar
 # https://www.lenfisherscience.com/36-all-you-need-is-love-mathematical-style/
+# http://www.sthda.com/english/wiki/ggplot2-axis-scales-and-transformations

@@ -3,16 +3,102 @@ rm(list=ls())
 library(tidyverse)
 
 
-t <- seq(-1,1,0.1)
+t <- seq(-pi,pi,0.001)
 x <- 16*0.25*(3*sin(t) - sin(3*t))
 y <- 13*cos(t) - 5*cos(2*t) - cos(4*t)
+
+
+# Letters -----------------------------------------------------------------
+
+# Plot I----
+
+point1 <- 0
+point2 <- 0
+I <- tibble(point1, point2)
+
+IPlot <- I %>% 
+  ggplot(aes(point1, point2)) +
+  theme_classic() +
+  geom_errorbar(ymin=-1, ymax=1, width=0.2, size=1, color="blue") +
+  expand_limits(x=c(-.5,.5), y=c(-1.5,1.5)) +
+  theme(axis.title.y = element_blank(),
+        axis.title.x = element_blank(),
+        plot.title = element_blank(),
+        axis.line = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text = element_blank())
+IPlot
+
+
+# Plot L ------------------------------------------------------------------
+
+x2 <- seq(1,100,.1)
+y2 <- 1/x2
+L <- tibble(x2,y2)
+
+LPlot <- L %>% 
+  ggplot(aes(x2,y2)) +
+  theme_classic() +
+  geom_line() +
+  expand_limits(x=c(-90,200), y=c(0,1.1)) +
+  theme(axis.title.y = element_blank(),
+        axis.title.x = element_blank(),
+        plot.title = element_blank(),
+        axis.line = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text = element_blank())
+LPlot
+
+
+# Plot O ------------------------------------------------------------------
+
+x3 <- seq(-3, 3, 0.1)
+y3.1 <- sqrt(9-(x3^2))
+y3.2 <- -sqrt(9-x3^2)
+O <- tibble(x3, y3.1, y3.2)
+
+OPlot <- O %>% 
+  ggplot(aes(x3 ,y3.1)) +
+  geom_line() +
+  ggplot(aes(x3, y3.2)) +
+  geom_line()
+OPlot
+
+# Hearts ------------------------------------------------------------------
 
 Heart1 <- tibble(x,y)
 
 Heart1Plot <- Heart1 %>% 
   ggplot(aes(x,y)) +
-  geom_line()
+  theme_classic() +
+  geom_line(color = "pink") +
+  theme(axis.title.y = element_blank(),
+        axis.title.x = element_blank(),
+        plot.title = element_blank(),
+        axis.line = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text = element_blank()) +
+  coord_polar(start = pi)
 Heart1Plot
+
+
+r <- 2 - 2*sin(t) + sin(t)*(sqrt(abs(cos(t))))/(sin(t)+1.4)
+
+Heart2 <- tibble(t,r)
+
+Heart2Plot <- Heart2 %>% 
+  ggplot(aes(t,r)) +
+  theme_classic() +
+  geom_line() +
+  coord_polar(start = pi/2) +
+  scale_fill_manual(values = "pink") +
+  theme(axis.title.y = element_blank(),
+        axis.title.x = element_blank(),
+        plot.title = element_blank(),
+        axis.line = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text = element_blank())
+Heart2Plot
 
 # Proving Functionality ---------------------------------------------------
 
@@ -79,3 +165,8 @@ for(ll in c("","x","y","xy"))
 # https://www.math.ucla.edu/~anderson/rw1001/library/base/html/curve.html
 # https://www.math.ucla.edu/~anderson/rw1001/library/base/html/splinefun.html
 # https://www.math.ucla.edu/~anderson/rw1001/library/base/html/par.html
+# https://ggplot2.tidyverse.org/reference/coord_polar.html
+# https://stackoverflow.com/questions/39773933/how-to-get-a-really-periodic-polar-surface-plot-with-ggplot
+# http://sape.inf.usi.ch/quick-reference/ggplot2/geom_errorbar
+# https://www.lenfisherscience.com/36-all-you-need-is-love-mathematical-style/
+# http://www.sthda.com/english/wiki/ggplot2-axis-scales-and-transformations

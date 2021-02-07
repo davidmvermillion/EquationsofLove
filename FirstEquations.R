@@ -7,6 +7,31 @@ t <- seq(-pi,pi,0.001)
 x <- 16*0.25*(3*sin(t) - sin(3*t))
 y <- 13*cos(t) - 5*cos(2*t) - cos(4*t)
 
+
+# Letters -----------------------------------------------------------------
+
+# Plot I
+
+point1 <- 0
+point2 <- 0
+I <- tibble(point1, point2)
+
+IPlot <- I %>% 
+  ggplot(aes(point1, point2)) +
+  theme_classic() +
+  geom_errorbar(ymin=-1, ymax=1, width=0.2, size=1, color="blue") +
+  expand_limits(x=c(-.5,.5), y=c(-1.5,1.5)) +
+  theme(axis.title.y = element_blank(),
+        axis.title.x = element_blank(),
+        plot.title = element_blank(),
+        axis.line = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text = element_blank())
+IPlot
+
+
+# Hearts ------------------------------------------------------------------
+
 Heart1 <- tibble(x,y)
 
 Heart1Plot <- Heart1 %>% 
@@ -108,3 +133,5 @@ for(ll in c("","x","y","xy"))
 # https://www.math.ucla.edu/~anderson/rw1001/library/base/html/par.html
 # https://ggplot2.tidyverse.org/reference/coord_polar.html
 # https://stackoverflow.com/questions/39773933/how-to-get-a-really-periodic-polar-surface-plot-with-ggplot
+# http://sape.inf.usi.ch/quick-reference/ggplot2/geom_errorbar
+# https://www.lenfisherscience.com/36-all-you-need-is-love-mathematical-style/

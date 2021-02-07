@@ -3,8 +3,16 @@ rm(list=ls())
 library(tidyverse)
 
 
+t <- seq(-1,1,0.1)
+x <- 16*0.25*(3*sin(t) - sin(3*t))
+y <- 13*cos(t) - 5*cos(2*t) - cos(4*t)
 
+Heart1 <- tibble(x,y)
 
+Heart1Plot <- Heart1 %>% 
+  ggplot(aes(x,y)) +
+  geom_line()
+Heart1Plot
 
 # Proving Functionality ---------------------------------------------------
 

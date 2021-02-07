@@ -1,3 +1,3 @@
 # EquationsofLove
-Equations and graphs for Valentines Day
+Equations and graphs for Valentines Day.
 Contributions welcomed.

@@ -3,7 +3,7 @@ rm(list=ls())
 library(tidyverse)
 
 
-t <- seq(-1,1,0.01)
+t <- seq(-pi,pi,0.001)
 x <- 16*0.25*(3*sin(t) - sin(3*t))
 y <- 13*cos(t) - 5*cos(2*t) - cos(4*t)
 
@@ -11,12 +11,35 @@ Heart1 <- tibble(x,y)
 
 Heart1Plot <- Heart1 %>% 
   ggplot(aes(x,y)) +
-  geom_line() +
+  theme_classic() +
+  geom_line(color = "pink") +
+  theme(axis.title.y = element_blank(),
+        axis.title.x = element_blank(),
+        plot.title = element_blank(),
+        axis.line = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text = element_blank()) +
   coord_polar(start = pi)
 Heart1Plot
 
 
-r <- 2 - 2*sin(t)
+r <- 2 - 2*sin(t) + sin(t)*(sqrt(abs(cos(t))))/(sin(t)+1.4)
+
+Heart2 <- tibble(t,r)
+
+Heart2Plot <- Heart2 %>% 
+  ggplot(aes(t,r)) +
+  theme_classic() +
+  geom_line() +
+  coord_polar(start = pi/2) +
+  scale_fill_manual(values = "pink") +
+  theme(axis.title.y = element_blank(),
+        axis.title.x = element_blank(),
+        plot.title = element_blank(),
+        axis.line = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text = element_blank())
+Heart2Plot
 
 # Proving Functionality ---------------------------------------------------
 

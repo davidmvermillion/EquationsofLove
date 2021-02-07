@@ -1,5 +1,31 @@
 rm(list=ls())
 
+library(tidyverse)
+
+
+
+
+
+# Proving Functionality ---------------------------------------------------
+
+
+
+n <- 50
+x <- -n:n
+y <- x^3
+plot(x, y)
+lines(spline(x, y))
+lines(spline(x, y, n = 201), col = 2)
+z <- lines(spline(x,y))
+plot(x,z)
+
+Cubes <- tibble(x,y)
+
+Cubic <- Cubes %>% 
+  ggplot(aes(x, y)) +
+  geom_line()
+Cubic
+
 # Test Code ---------------------------------------------------------------
 
 

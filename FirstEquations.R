@@ -10,7 +10,7 @@ y <- 13*cos(t) - 5*cos(2*t) - cos(4*t)
 
 # Letters -----------------------------------------------------------------
 
-# Plot I
+# Plot I----
 
 point1 <- 0
 point2 <- 0
@@ -28,6 +28,26 @@ IPlot <- I %>%
         axis.ticks = element_blank(),
         axis.text = element_blank())
 IPlot
+
+
+# Plot L ------------------------------------------------------------------
+
+x2 <- seq(1,100,.1)
+y2 <- 1/x2
+L <- tibble(x2,y2)
+
+LPlot <- L %>% 
+  ggplot(aes(x2,y2)) +
+  theme_classic() +
+  geom_line() +
+  expand_limits(x=c(-90,200), y=c(0,1.1)) +
+  theme(axis.title.y = element_blank(),
+        axis.title.x = element_blank(),
+        plot.title = element_blank(),
+        axis.line = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text = element_blank())
+LPlot
 
 
 # Hearts ------------------------------------------------------------------

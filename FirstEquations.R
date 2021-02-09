@@ -89,7 +89,7 @@ Heart2 <- tibble(t,r)
 Heart2Plot <- Heart2 %>% 
   ggplot(aes(t,r)) +
   theme_classic() +
-  geom_line() +
+  geom_polygon(fill = "pink") +
   coord_polar(start = pi/2) +
   scale_fill_manual(values = "pink") +
   theme(axis.title.y = element_blank(),

@@ -3,7 +3,7 @@ rm(list=ls())
 library(tidyverse)
 
 
-t <- seq(-pi,pi,0.001)
+t <- seq(-pi,pi,0.01)
 x <- 16*0.25*(3*sin(t) - sin(3*t))
 y <- 13*cos(t) - 5*cos(2*t) - cos(4*t)
 
@@ -58,11 +58,31 @@ y3.2 <- -sqrt(9-x3^2)
 O <- tibble(x3, y3.1, y3.2)
 
 OPlot <- O %>% 
-  ggplot(aes(x3 ,y3.1)) +
+  ggplot(aes(x3, y3.1)) +
   geom_line() +
   ggplot(aes(x3, y3.2)) +
   geom_line()
 OPlot
+
+
+# Plot V ------------------------------------------------------------------
+
+x4 <- seq(-3, 3, 0.1)
+y4 <- abs(x4)
+V <- tibble(x4,y4)
+
+VPlot <- V %>% 
+  ggplot(aes(x4, y4)) + 
+  theme_classic() +
+  geom_line(size = 4, color = "pink", lineend = "round") +
+  expand_limits(x=c(-4.5, 4.5), y=c(0, 3)) +
+  theme(axis.title.y = element_blank(),
+        axis.title.x = element_blank(),
+        plot.title = element_blank(),
+        axis.line = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text = element_blank())
+VPlot
 
 # Hearts ------------------------------------------------------------------
 
@@ -71,13 +91,14 @@ Heart1 <- tibble(x,y)
 Heart1Plot <- Heart1 %>% 
   ggplot(aes(x,y)) +
   theme_classic() +
-  geom_line(color = "pink") +
+  geom_polygon(fill = "pink") +
   theme(axis.title.y = element_blank(),
         axis.title.x = element_blank(),
         plot.title = element_blank(),
         axis.line = element_blank(),
         axis.ticks = element_blank(),
         axis.text = element_blank()) +
+  
   coord_polar(start = pi)
 Heart1Plot
 

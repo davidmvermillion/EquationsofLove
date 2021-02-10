@@ -126,7 +126,7 @@ UPlot <- U %>%
         axis.text = element_blank())
 UPlot
 
-# Plot full message on one chart
+# Plot full message on one chart (iteration 2)
 
 
 # Hearts ------------------------------------------------------------------
@@ -165,6 +165,8 @@ Heart2Plot <- Heart2 %>%
         axis.ticks = element_blank(),
         axis.text = element_blank())
 Heart2Plot
+
+# Make RMarkdown document
 
 
 # References --------------------------------------------------------------

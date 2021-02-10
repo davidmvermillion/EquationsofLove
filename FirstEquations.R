@@ -168,6 +168,11 @@ Heart2Plot
 
 # Make RMarkdown document
 
+install.packages('rmarkdown', 'tinytex')
+library('rmarkdown', 'tinytex')
+
+
+
 
 # References --------------------------------------------------------------
 

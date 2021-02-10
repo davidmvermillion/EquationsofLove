@@ -87,7 +87,7 @@ VPlot
 
 # Plot E ------------------------------------------------------------------
 
-y6 <- seq(-pi, pi, 0.1)
+y6 <- seq(-pi, pi, 0.001)
 x6 <- -3*abs(sin(y6))
 E <- tibble(x6, y6)
 
@@ -95,19 +95,35 @@ plot(x6, y6)
 
 EPlot <- E %>% 
   ggplot(aes(x6, y6)) + 
-  geom_line()
+  theme_classic() +
+  expand_limits(x=c(-5, 3), y=c(-pi, pi)) +
+  geom_point(color = "pink", size = 4) +
+  theme(axis.title.y = element_blank(),
+        axis.title.x = element_blank(),
+        plot.title = element_blank(),
+        axis.line = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text = element_blank())
 EPlot
 
 
 # Plot U ------------------------------------------------------------------
 
-x5 <- seq(-3, 3, 0.1)
+x5 <- seq(-3.1, 3, 0.1)
 y5 <- (4*x5^4) + x5^3 + x5^2
 U <- tibble(x5, y5)
 
 UPlot <- U %>% 
   ggplot(aes(x5, y5)) +
-  geom_line()
+  theme_classic() +
+  geom_line(size = 4, color = "pink") +
+  expand_limits(x=c(-5, 5), y=c(0, 400)) +
+  theme(axis.title.y = element_blank(),
+        axis.title.x = element_blank(),
+        plot.title = element_blank(),
+        axis.line = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text = element_blank())
 UPlot
 
 # Plot full message on one chart

@@ -1,0 +1,60 @@
+---
+title: "Happy Valentines Day"
+author: "David M Vermillion"
+date: "2/10/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Background
+
+Happy Valentines Day my beloved Shayla!
+
+As you know, I enjoy dabbling in all things visualization and math. I figured a delightful gift for you would be to create a little card telling how much I love you, utilizing some mathiness. I used one of my graphing programs (ggplot2) to generate the graphs shown below.
+
+First, I wanted to use math to say that I love you.
+
+``` {r, echo=FALSE, message=FALSE, warning=FALSE}
+# Letters
+    library(tidyverse)
+    t <- seq(-pi,pi,0.01)
+    x <- 16*0.25*(3*sin(t) - sin(3*t))
+    y <- 13*cos(t) - 5*cos(2*t) - cos(4*t)
+
+    point1 <- 0
+    point2 <- 0
+    I <- tibble(point1, point2)
+
+    IPlot <- I %>% 
+      ggplot(aes(point1, point2)) +
+      theme_classic() +
+      geom_errorbar(ymin=-1, ymax=1, width=0.2, size=4, color="pink") +
+      expand_limits(x=c(-.5,.5), y=c(-1.5,1.5)) +
+      theme(axis.title.y = element_blank(),
+            axis.title.x = element_blank(),
+            plot.title = element_blank(),
+            axis.line = element_blank(),
+            axis.ticks = element_blank(),
+            axis.text = element_blank())
+    IPlot
+```
+I also wanted to show you a few hearts I created to expressed my love.
+
+# Code
+
+These are the equations I used to make the letters and the hearts
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```

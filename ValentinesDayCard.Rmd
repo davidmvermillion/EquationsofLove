@@ -24,22 +24,123 @@ First, I wanted to use math to say that I love you.
     x <- 16*0.25*(3*sin(t) - sin(3*t))
     y <- 13*cos(t) - 5*cos(2*t) - cos(4*t)
 
-    point1 <- 0
-    point2 <- 0
-    I <- tibble(point1, point2)
+# Plot I----
 
-    IPlot <- I %>% 
-      ggplot(aes(point1, point2)) +
-      theme_classic() +
-      geom_errorbar(ymin=-1, ymax=1, width=0.2, size=4, color="pink") +
-      expand_limits(x=c(-.5,.5), y=c(-1.5,1.5)) +
-      theme(axis.title.y = element_blank(),
-            axis.title.x = element_blank(),
-            plot.title = element_blank(),
-            axis.line = element_blank(),
-            axis.ticks = element_blank(),
-            axis.text = element_blank())
-    IPlot
+point1 <- 0
+point2 <- 0
+I <- tibble(point1, point2)
+
+IPlot <- I %>% 
+  ggplot(aes(point1, point2)) +
+  theme_classic() +
+  geom_errorbar(ymin=-1, ymax=1, width=0.2, size=4, color="pink") +
+  expand_limits(x=c(-.5,.5), y=c(-1.5,1.5)) +
+  theme(axis.title.y = element_blank(),
+        axis.title.x = element_blank(),
+        plot.title = element_blank(),
+        axis.line = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text = element_blank())
+IPlot
+
+
+# Plot L ------------------------------------------------------------------
+
+x2 <- seq(1,100,.1)
+y2 <- 1/x2
+L <- tibble(x2,y2)
+
+LPlot <- L %>% 
+  ggplot(aes(x2,y2)) +
+  theme_classic() +
+  geom_line(size = 4, color = "pink", lineend = "round") +
+  expand_limits(x=c(-90,200), y=c(0,1.1)) +
+  theme(axis.title.y = element_blank(),
+        axis.title.x = element_blank(),
+        plot.title = element_blank(),
+        axis.line = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text = element_blank())
+LPlot
+
+
+# Plot O ------------------------------------------------------------------
+
+x3 <- seq(-3, 3, 0.1)
+y3.1 <- sqrt(9-(x3^2))
+y3.2 <- -sqrt(9-x3^2)
+O <- tibble(x3, y3.1, y3.2)
+
+OPlot <- O %>% 
+  ggplot(aes(x3, y3.1)) +
+  geom_line() +
+  ggplot(aes(x3, y3.2)) +
+  geom_line()
+OPlot
+
+
+# Plot V ------------------------------------------------------------------
+
+x4 <- seq(-3, 3, 0.1)
+y4 <- abs(x4)
+V <- tibble(x4,y4)
+
+VPlot <- V %>% 
+  ggplot(aes(x4, y4)) + 
+  theme_classic() +
+  geom_line(size = 4, color = "pink", lineend = "round") +
+  expand_limits(x=c(-4.5, 4.5), y=c(0, 3)) +
+  theme(axis.title.y = element_blank(),
+        axis.title.x = element_blank(),
+        plot.title = element_blank(),
+        axis.line = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text = element_blank())
+VPlot
+
+
+# Plot E ------------------------------------------------------------------
+
+y6 <- seq(-pi, pi, 0.001)
+x6 <- -3*abs(sin(y6))
+E <- tibble(x6, y6)
+
+plot(x6, y6)
+
+EPlot <- E %>% 
+  ggplot(aes(x6, y6)) + 
+  theme_classic() +
+  expand_limits(x=c(-5, 3), y=c(-pi, pi)) +
+  geom_point(color = "pink", size = 4) +
+  theme(axis.title.y = element_blank(),
+        axis.title.x = element_blank(),
+        plot.title = element_blank(),
+        axis.line = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text = element_blank())
+EPlot
+
+
+# Plot U ------------------------------------------------------------------
+
+x5 <- seq(-3.1, 3, 0.1)
+y5 <- (4*x5^4) + x5^3 + x5^2
+U <- tibble(x5, y5)
+
+UPlot <- U %>% 
+  ggplot(aes(x5, y5)) +
+  theme_classic() +
+  geom_line(size = 4, color = "pink") +
+  expand_limits(x=c(-5, 5), y=c(0, 400)) +
+  theme(axis.title.y = element_blank(),
+        axis.title.x = element_blank(),
+        plot.title = element_blank(),
+        axis.line = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text = element_blank())
+UPlot
+    
+    
 ```
 I also wanted to show you a few hearts I created to expressed my love.
 

@@ -52,18 +52,32 @@ LPlot
 
 # Plot O ------------------------------------------------------------------
 
-x3 <- seq(-3, 3, 0.1)
-y3.1 <- sqrt(9-(x3^2))
-y3.2 <- -sqrt(9-x3^2)
-O <- tibble(x3, y3.1, y3.2)
+# # Troubleshoot this later
+# x3 <- seq(-3, 3, 0.1)
+# y3.1 <- sqrt(9-(x3^2))
+# y3.2 <- -sqrt(9-x3^2)
+# O <- tibble(x3, y3.1, y3.2)
+# 
+# 
+# OPlot <- O %>% 
+#   ggplot(aes(x3, y3.1)) +
+#   geom_line() +
+#   ggplot(aes(x3, y3.2)) +
+#   geom_line()
+# OPlot
 
-OPlot <- O %>% 
-  ggplot(aes(x3, y3.1)) +
-  geom_line() +
-  ggplot(aes(x3, y3.2)) +
-  geom_line()
-OPlot
-
+CirclePlot <- I %>% 
+  ggplot(aes(point1, point2)) +
+  theme_classic() +
+  geom_point(size = 150, color = "pink") +
+  geom_point(size = 146, color = "white") +
+  theme(axis.title.y = element_blank(),
+        axis.title.x = element_blank(),
+        plot.title = element_blank(),
+        axis.line = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text = element_blank())
+CirclePlot
 
 # Plot V ------------------------------------------------------------------
 

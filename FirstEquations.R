@@ -70,7 +70,7 @@ CirclePlot <- I %>%
   ggplot(aes(point1, point2)) +
   theme_classic() +
   geom_point(size = 150, color = "pink") +
-  geom_point(size = 146, color = "white") +
+  geom_point(size = 142, color = "white") +
   theme(axis.title.y = element_blank(),
         axis.title.x = element_blank(),
         plot.title = element_blank(),
@@ -186,8 +186,6 @@ install.packages('rmarkdown', 'tinytex')
 library('rmarkdown', 'tinytex')
 
 
-
-
 # References --------------------------------------------------------------
 
 
@@ -201,3 +199,5 @@ library('rmarkdown', 'tinytex')
 # http://www.sthda.com/english/wiki/ggplot2-axis-scales-and-transformations
 # http://jwilson.coe.uga.edu/emt668/EMAT6680.Folders/Maddox/Maddox.2/Maddox.2.html#:~:text=As%20a%20increases%2C%20the%20sides,a%20is%20equal%20to%20zero.
 # https://www.rdocumentation.org/packages/ggforce/versions/0.3.2/topics/geom_circle
+# https://community.rstudio.com/t/circle-in-ggplot2/8543/3
+# https://community.rstudio.com/t/how-to-stack-two-images-horizontally-in-r-markdown/18941/3

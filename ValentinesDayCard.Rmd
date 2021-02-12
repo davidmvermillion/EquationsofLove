@@ -13,134 +13,9 @@ knitr::opts_chunk$set(echo = FALSE)
 
 Happy Valentines Day my beloved Shayla!
 
-As you know, I enjoy dabbling in all things visualization and math. I figured a delightful gift for you would be to create a little card telling how much I love you, utilizing some mathiness. I used one of my graphing programs (ggplot2) to generate the graphs shown below.
-
-First, I wanted to use math to say that I love you.
-
-``` {r, echo=FALSE, message=FALSE, warning=FALSE}
-# Letters
-    library(tidyverse)
-    t <- seq(-pi,pi,0.01)
-    x <- 16*0.25*(3*sin(t) - sin(3*t))
-    y <- 13*cos(t) - 5*cos(2*t) - cos(4*t)
-
-# Plot I----
-
-point1 <- 0
-point2 <- 0
-I <- tibble(point1, point2)
-
-IPlot <- I %>% 
-  ggplot(aes(point1, point2)) +
-  theme_classic() +
-  geom_errorbar(ymin=-1, ymax=1, width=0.2, size=4, color="pink") +
-  expand_limits(x=c(-.5,.5), y=c(-1.5,1.5)) +
-  theme(axis.title.y = element_blank(),
-        axis.title.x = element_blank(),
-        plot.title = element_blank(),
-        axis.line = element_blank(),
-        axis.ticks = element_blank(),
-        axis.text = element_blank())
-IPlot
+As you know, I enjoy dabbling in all things visualization and math. I figured a delightful gift for you would be to create a little card telling how much I love you, utilizing some mathiness. I used one of my graphing programs (ggplot2) to generate the message shown below in two ways.
 
 
-# Plot L ------------------------------------------------------------------
-
-x2 <- seq(1,100,.1)
-y2 <- 1/x2
-L <- tibble(x2,y2)
-
-LPlot <- L %>% 
-  ggplot(aes(x2,y2)) +
-  theme_classic() +
-  geom_line(size = 4, color = "pink", lineend = "round") +
-  expand_limits(x=c(-90,200), y=c(0,1.1)) +
-  theme(axis.title.y = element_blank(),
-        axis.title.x = element_blank(),
-        plot.title = element_blank(),
-        axis.line = element_blank(),
-        axis.ticks = element_blank(),
-        axis.text = element_blank())
-LPlot
-
-
-# Plot O ------------------------------------------------------------------
-
-CirclePlot <- I %>% 
-  ggplot(aes(point1, point2)) +
-  theme_classic() +
-  geom_point(size = 150, color = "pink") +
-  geom_point(size = 142, color = "white") +
-  theme(axis.title.y = element_blank(),
-        axis.title.x = element_blank(),
-        plot.title = element_blank(),
-        axis.line = element_blank(),
-        axis.ticks = element_blank(),
-        axis.text = element_blank())
-CirclePlot
-
-
-# Plot V ------------------------------------------------------------------
-
-x4 <- seq(-3, 3, 0.1)
-y4 <- abs(x4)
-V <- tibble(x4,y4)
-
-VPlot <- V %>% 
-  ggplot(aes(x4, y4)) + 
-  theme_classic() +
-  geom_line(size = 4, color = "pink", lineend = "round") +
-  expand_limits(x=c(-4.5, 4.5), y=c(0, 3)) +
-  theme(axis.title.y = element_blank(),
-        axis.title.x = element_blank(),
-        plot.title = element_blank(),
-        axis.line = element_blank(),
-        axis.ticks = element_blank(),
-        axis.text = element_blank())
-VPlot
-
-
-# Plot E ------------------------------------------------------------------
-
-y6 <- seq(-pi, pi, 0.001)
-x6 <- -3*abs(sin(y6))
-E <- tibble(x6, y6)
-
-EPlot <- E %>% 
-  ggplot(aes(x6, y6)) + 
-  theme_classic() +
-  expand_limits(x=c(-5, 3), y=c(-pi, pi)) +
-  geom_point(color = "pink", size = 4) +
-  theme(axis.title.y = element_blank(),
-        axis.title.x = element_blank(),
-        plot.title = element_blank(),
-        axis.line = element_blank(),
-        axis.ticks = element_blank(),
-        axis.text = element_blank())
-EPlot
-
-
-# Plot U ------------------------------------------------------------------
-
-x5 <- seq(-3.1, 3, 0.1)
-y5 <- (4*x5^4) + x5^3 + x5^2
-U <- tibble(x5, y5)
-
-UPlot <- U %>% 
-  ggplot(aes(x5, y5)) +
-  theme_classic() +
-  geom_line(size = 4, color = "pink") +
-  expand_limits(x=c(-5, 5), y=c(0, 400)) +
-  theme(axis.title.y = element_blank(),
-        axis.title.x = element_blank(),
-        plot.title = element_blank(),
-        axis.line = element_blank(),
-        axis.ticks = element_blank(),
-        axis.text = element_blank())
-UPlot
-    
-    
-```
 
 ```{r image_grobs, fig.show = "hold", out.width = "30%", fig.align = "default"}
 
@@ -150,61 +25,39 @@ knitr::include_graphics("Heart2.svg")
 
 knitr::include_graphics("U.svg")
 
+
+```
+
+
+________________________________________________________________________________
+
+
+```{r fig.show = "hold", out.width = "50%", fig.align = "center"}
+
+knitr::include_graphics("I.svg")
+
+```
+
+```{r fig.show = "hold", out.width = "25%", fig.align = "default"}
+
+knitr::include_graphics("L.svg")
+
+knitr::include_graphics("O.svg")
+
+knitr::include_graphics("V.svg")
+
+knitr::include_graphics("E.svg")
+
+```
+
+```{r fig.show = "hold", out.width = "50%", fig.align = "center"}
+
+
+knitr::include_graphics("U.svg")
 ```
 
 I also wanted to show you a few hearts I created to expressed my love.
 
-``` {r, echo=FALSE, message=FALSE, warning=FALSE}
-Heart1 <- tibble(x,y)
-
-Heart1Plot <- Heart1 %>% 
-  ggplot(aes(x,y)) +
-  theme_classic() +
-  geom_polygon(fill = "pink") +
-  theme(axis.title.y = element_blank(),
-        axis.title.x = element_blank(),
-        plot.title = element_blank(),
-        axis.line = element_blank(),
-        axis.ticks = element_blank(),
-        axis.text = element_blank()) +
-  
-  coord_polar(start = pi)
-Heart1Plot
-
-
-r <- 2 - 2*sin(t) + sin(t)*(sqrt(abs(cos(t))))/(sin(t)+1.4)
-
-Heart2 <- tibble(t,r)
-
-Heart2Plot <- Heart2 %>% 
-  ggplot(aes(t,r)) +
-  theme_classic() +
-  geom_polygon(fill = "pink") +
-  coord_polar(start = pi/2) +
-  scale_fill_manual(values = "pink") +
-  theme(axis.title.y = element_blank(),
-        axis.title.x = element_blank(),
-        plot.title = element_blank(),
-        axis.line = element_blank(),
-        axis.ticks = element_blank(),
-        axis.text = element_blank())
-Heart2Plot
-```
-
-This of course also leads to one last way to express my love:
-
-```  {r, echo=FALSE, message=FALSE, warning=FALSE}
-IPlot
-Heart2Plot
-UPlot
-
-```
-
-```  {r, echo=FALSE, message=FALSE, warning=FALSE}
-library(cowplot)
-plot_grid(IPlot, Heart2Plot, UPlot, align = 'h', ncol = 1)
-
-```
 
 With love from your amazed husband,
 

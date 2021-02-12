@@ -180,10 +180,6 @@ Heart2Plot <- Heart2 %>%
         axis.text = element_blank())
 Heart2Plot
 
-# Make RMarkdown document
-
-install.packages('rmarkdown', 'tinytex')
-library('rmarkdown', 'tinytex')
 
 
 # References --------------------------------------------------------------
@@ -201,3 +197,4 @@ library('rmarkdown', 'tinytex')
 # https://www.rdocumentation.org/packages/ggforce/versions/0.3.2/topics/geom_circle
 # https://community.rstudio.com/t/circle-in-ggplot2/8543/3
 # https://community.rstudio.com/t/how-to-stack-two-images-horizontally-in-r-markdown/18941/3
+# https://community.rstudio.com/t/how-to-stack-two-images-horizontally-in-r-markdown/18941/11

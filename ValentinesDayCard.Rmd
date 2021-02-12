@@ -142,6 +142,15 @@ UPlot
     
 ```
 
+```{r image_grobs, fig.show = "hold", out.width = "30%", fig.align = "default"}
+
+knitr::include_graphics("I.svg")
+
+knitr::include_graphics("Heart2.svg")
+
+knitr::include_graphics("U.svg")
+
+```
 
 I also wanted to show you a few hearts I created to expressed my love.
 

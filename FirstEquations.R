@@ -52,18 +52,32 @@ LPlot
 
 # Plot O ------------------------------------------------------------------
 
-x3 <- seq(-3, 3, 0.1)
-y3.1 <- sqrt(9-(x3^2))
-y3.2 <- -sqrt(9-x3^2)
-O <- tibble(x3, y3.1, y3.2)
+# # Troubleshoot this later
+# x3 <- seq(-3, 3, 0.1)
+# y3.1 <- sqrt(9-(x3^2))
+# y3.2 <- -sqrt(9-x3^2)
+# O <- tibble(x3, y3.1, y3.2)
+# 
+# 
+# OPlot <- O %>% 
+#   ggplot(aes(x3, y3.1)) +
+#   geom_line() +
+#   ggplot(aes(x3, y3.2)) +
+#   geom_line()
+# OPlot
 
-OPlot <- O %>% 
-  ggplot(aes(x3, y3.1)) +
-  geom_line() +
-  ggplot(aes(x3, y3.2)) +
-  geom_line()
-OPlot
-
+CirclePlot <- I %>% 
+  ggplot(aes(point1, point2)) +
+  theme_classic() +
+  geom_point(size = 150, color = "pink") +
+  geom_point(size = 142, color = "white") +
+  theme(axis.title.y = element_blank(),
+        axis.title.x = element_blank(),
+        plot.title = element_blank(),
+        axis.line = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text = element_blank())
+CirclePlot
 
 # Plot V ------------------------------------------------------------------
 
@@ -87,21 +101,46 @@ VPlot
 
 # Plot E ------------------------------------------------------------------
 
+y6 <- seq(-pi, pi, 0.001)
+x6 <- -3*abs(sin(y6))
+E <- tibble(x6, y6)
 
+plot(x6, y6)
+
+EPlot <- E %>% 
+  ggplot(aes(x6, y6)) + 
+  theme_classic() +
+  expand_limits(x=c(-5, 3), y=c(-pi, pi)) +
+  geom_point(color = "pink", size = 4) +
+  theme(axis.title.y = element_blank(),
+        axis.title.x = element_blank(),
+        plot.title = element_blank(),
+        axis.line = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text = element_blank())
+EPlot
 
 
 # Plot U ------------------------------------------------------------------
 
-x5 <- seq(-3, 3, 0.1)
+x5 <- seq(-3.1, 3, 0.1)
 y5 <- (4*x5^4) + x5^3 + x5^2
 U <- tibble(x5, y5)
 
 UPlot <- U %>% 
-  ggplot(aes(x5, y5))+
-  geom_line()
+  ggplot(aes(x5, y5)) +
+  theme_classic() +
+  geom_line(size = 4, color = "pink") +
+  expand_limits(x=c(-5, 5), y=c(0, 400)) +
+  theme(axis.title.y = element_blank(),
+        axis.title.x = element_blank(),
+        plot.title = element_blank(),
+        axis.line = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text = element_blank())
 UPlot
 
-# Plot full message on one chart
+# Plot full message on one chart (iteration 2)
 
 
 # Hearts ------------------------------------------------------------------
@@ -141,63 +180,6 @@ Heart2Plot <- Heart2 %>%
         axis.text = element_blank())
 Heart2Plot
 
-# Proving Functionality ---------------------------------------------------
-
-
-
-n <- 50
-x <- -n:n
-y <- x^3
-plot(x, y)
-lines(spline(x, y))
-lines(spline(x, y, n = 201), col = 2)
-z <- lines(spline(x,y))
-plot(x,z)
-
-Cubes <- tibble(x,y)
-
-Cubic <- Cubes %>% 
-  ggplot(aes(x, y)) +
-  geom_line()
-Cubic
-
-# Test Code ---------------------------------------------------------------
-
-
-op <- par(mfrow = c(2,1), mgp = c(2,.8,0), mar = .1+c(3,3,3,1))
-n <- 9
-x <- 1:n
-y <- rnorm(n)
-plot(x, y, main = paste("spline[fun](.) through",n,"points"))
-lines(spline(x, y))
-lines(spline(x, y, n = 201), col = 2)
-
-y <- (x-6)^2
-plot(x, y, main = "spline(.) -- 3 methods")
-lines(spline(x, y, n = 201), col = 2)
-lines(spline(x, y, n = 201, method = "natural"), col = 3)
-lines(spline(x, y, n = 201, method = "periodic"), col = 4)
-legend(6,25, c("fmm","natural","periodic"), col=2:4, lty=1)
-
-f <- splinefun(x, y)
-ls(envir = environment(f))
-splinecoef <- eval(expression(z), envir = environment(f))
-curve(f(x), 1, 10, col = "green", lwd = 1.5)
-points(splinecoef, col = "purple", cex = 2)
-par(op)
-
-
-par(mfrow=c(2,2))
-curve(x^3-3*x, -2, 2)
-curve(x^2-2, add = TRUE, col = "violet")
-
-curve(sin, -pi, 3*pi)
-plot(cos)
-chippy <- function(x) sin(cos(x)*exp(-x/2))
-curve(chippy, -8, 7, n=2001)
-
-for(ll in c("","x","y","xy"))
-  curve(log(1+x), 1,100, log=ll, sub=paste("log=",ll))
 
 
 # References --------------------------------------------------------------
@@ -213,3 +195,6 @@ for(ll in c("","x","y","xy"))
 # http://www.sthda.com/english/wiki/ggplot2-axis-scales-and-transformations
 # http://jwilson.coe.uga.edu/emt668/EMAT6680.Folders/Maddox/Maddox.2/Maddox.2.html#:~:text=As%20a%20increases%2C%20the%20sides,a%20is%20equal%20to%20zero.
 # https://www.rdocumentation.org/packages/ggforce/versions/0.3.2/topics/geom_circle
+# https://community.rstudio.com/t/circle-in-ggplot2/8543/3
+# https://community.rstudio.com/t/how-to-stack-two-images-horizontally-in-r-markdown/18941/3
+# https://community.rstudio.com/t/how-to-stack-two-images-horizontally-in-r-markdown/18941/11

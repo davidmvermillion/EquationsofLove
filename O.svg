@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="646pt" height="403pt" viewBox="0 0 646 403" version="1.1">
+<defs>
+<clipPath id="clip1">
+  <path d="M 8.21875 5.480469 L 640.519531 5.480469 L 640.519531 394.78125 L 8.21875 394.78125 Z M 8.21875 5.480469 "/>
+</clipPath>
+</defs>
+<g id="surface11">
+<rect x="0" y="0" width="646" height="403" style="fill:rgb(100%,100%,100%);fill-opacity:1;stroke:none;"/>
+<rect x="0" y="0" width="646" height="403" style="fill:rgb(100%,100%,100%);fill-opacity:1;stroke:none;"/>
+<path style="fill:none;stroke-width:1.066978;stroke-linecap:round;stroke-linejoin:round;stroke:rgb(100%,100%,100%);stroke-opacity:1;stroke-miterlimit:10;" d="M 0 403 L 646 403 L 646 0 L 0 0 Z M 0 403 "/>
+<g clip-path="url(#clip1)" clip-rule="nonzero">
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(100%,100%,100%);fill-opacity:1;" d="M 8.21875 394.78125 L 640.519531 394.78125 L 640.519531 5.480469 L 8.21875 5.480469 Z M 8.21875 394.78125 "/>
+</g>
+<path style="fill-rule:nonzero;fill:rgb(100%,75.294118%,79.607843%);fill-opacity:1;stroke-width:0.708661;stroke-linecap:round;stroke-linejoin:round;stroke:rgb(100%,75.294118%,79.607843%);stroke-opacity:1;stroke-miterlimit:10;" d="M 484.769531 200.128906 C 484.769531 288.71875 412.957031 360.53125 324.371094 360.53125 C 235.78125 360.53125 163.96875 288.71875 163.96875 200.128906 C 163.96875 111.542969 235.78125 39.730469 324.371094 39.730469 C 412.957031 39.730469 484.769531 111.542969 484.769531 200.128906 "/>
+<path style="fill-rule:nonzero;fill:rgb(100%,100%,100%);fill-opacity:1;stroke-width:0.708661;stroke-linecap:round;stroke-linejoin:round;stroke:rgb(100%,100%,100%);stroke-opacity:1;stroke-miterlimit:10;" d="M 476.234375 200.128906 C 476.234375 284.003906 408.242188 351.996094 324.371094 351.996094 C 240.496094 351.996094 172.503906 284.003906 172.503906 200.128906 C 172.503906 116.257813 240.496094 48.265625 324.371094 48.265625 C 408.242188 48.265625 476.234375 116.257813 476.234375 200.128906 "/>
+</g>
+</svg>

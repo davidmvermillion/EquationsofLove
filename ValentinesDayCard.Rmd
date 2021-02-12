@@ -204,7 +204,21 @@ David
 
 # Code
 
-These are the equations I used to make the letters and the hearts
+These are the equations I used to make the letters and the hearts, with the exception of the I and O, which I created using graph code.
+
+### L
+$y = \frac{1}{x}$
+
+### V
+$y=\lvert x\rvert$
+
+### E
+$x=-3\lvert sin(y)\rvert$
+
+
+### First Heart
+$x=4(3sin(\theta) - sin(3\theta))$
+$y=13cos(\theta) - 5cos(2\theta) - cos(4\theta)$
 
 ### Second Heart
 $r(\theta) = 2-2sin\theta+sin\theta \frac{\sqrt{\lvert cos\theta \rvert}}{sin\theta + 1.4}$

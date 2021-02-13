@@ -1,7 +1,7 @@
 ---
-title: "Happy Valentines Day"
+title: "Your Nerdy Valentine's Day Card"
 author: "David M Vermillion"
-date: "2/10/2021"
+date: "2/14/2021"
 output: html_document
 ---
 
@@ -9,11 +9,10 @@ output: html_document
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-## Background
 
-Happy Valentines Day my beloved Shayla!
+### Happy Valentine's Day my beloved Shayla!
 
-As you know, I enjoy dabbling in all things visualization and math. I figured a delightful gift for you would be to create a little card telling how much I love you, utilizing some mathiness. I used one of my graphing programs (ggplot2) to generate the message shown below in two ways.
+### As you know, I enjoy dabbling in all things visualization and math. I figured a delightful gift for you would be to create a little card telling how much I love you, utilizing some mathiness. I used one of my graphing programs (ggplot2) to generate the message shown below in two ways.
 
 
 
@@ -56,31 +55,56 @@ knitr::include_graphics("E.svg")
 knitr::include_graphics("U.svg")
 ```
 
-I also wanted to show you a few hearts I created to expressed my love.
+### I also wanted to show you another heart I created to express my love.
+
+```{r fig.show = "hold", out.width = "50%", fig.align = "center"}
+
+knitr::include_graphics("Heart1.svg")
+
+```
+
+### These are the equations I used to make the letters and the hearts, with the exception of the I and O, which I created using graph code.
+
+$\LARGE y = \frac{1}{x} \hspace{8cm}$
+```{r fig.show = "hold", out.width = "50%", fig.align = "default"}
+
+knitr::include_graphics("L.svg")
+
+```
 
 
-With love from your amazed husband,
+$\LARGE y=\lvert x\rvert \hspace{8cm}$
+```{r fig.show = "hold", out.width = "50%", fig.align = "default"}
 
-David
+knitr::include_graphics("V.svg")
 
-
-# Code
-
-These are the equations I used to make the letters and the hearts, with the exception of the I and O, which I created using graph code.
-
-### L
-$y = \frac{1}{x}$
-
-### V
-$y=\lvert x\rvert$
-
-### E
-$x=-3\lvert sin(y)\rvert$
+```
 
 
-### First Heart
-$x=4(3sin(\theta) - sin(3\theta))$
-$y=13cos(\theta) - 5cos(2\theta) - cos(4\theta)$
+$\LARGE x=-3\lvert sin(y)\rvert \hspace{6cm}$
+```{r fig.show = "hold", out.width = "50%", fig.align = "default"}
 
-### Second Heart
-$r(\theta) = 2-2sin\theta+sin\theta \frac{\sqrt{\lvert cos\theta \rvert}}{sin\theta + 1.4}$
+knitr::include_graphics("E.svg")
+
+```
+
+
+$\begin{align} & \LARGE x=4(3sin(\theta) - sin(3\theta))\\
+&\LARGE y=13cos(\theta) - 5cos(2\theta) - cos(4\theta) \end{align}$
+```{r fig.show = "hold", out.width = "50%", fig.align = "default"}
+
+knitr::include_graphics("Heart1.svg")
+
+```
+
+
+$\LARGE r(\theta) = 2-2sin\theta+sin\theta \frac{\sqrt{\lvert cos\theta \rvert}}{sin\theta + 1.4} \hspace{1.2cm}$
+```{r fig.show = "hold", out.width = "50%", fig.align = "default"}
+
+knitr::include_graphics("Heart2.svg")
+
+```
+
+### With love from your adoring husband,
+
+# David

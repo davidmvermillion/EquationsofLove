@@ -90,8 +90,8 @@ knitr::include_graphics("E.jpeg")
 ```
 
 
-$\begin{align} & \LARGE x=4(3sin(\theta) - sin(3\theta))\\
-&\LARGE y=13cos(\theta) - 5cos(2\theta) - cos(4\theta) \end{align}$
+$\LARGE x=4(3sin(\theta) - sin(3\theta))\\
+\LARGE y=13cos(\theta) - 5cos(2\theta) - cos(4\theta)$
 ```{r fig.show = "hold", out.width = "50%", fig.align = "default"}
 
 knitr::include_graphics("Heart1.jpeg")

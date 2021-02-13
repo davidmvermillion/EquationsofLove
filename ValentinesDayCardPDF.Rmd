@@ -12,7 +12,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```
 
 
-Happy Valentines Day my beloved Shayla!
+Happy Valentine's Day my beloved Shayla!
 
 As you know, I enjoy dabbling in all things visualization and math. I figured a delightful gift for you would be to create a little card telling how much I love you, utilizing some mathiness. I used one of my graphing programs (ggplot2) to generate the message shown below in two ways.
 \

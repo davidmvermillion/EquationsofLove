@@ -1,0 +1,110 @@
+---
+title: "Happy Valentines Day"
+author: "David M Vermillion"
+date: "2/14/2021"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+### Happy Valentines Day my beloved Shayla!
+
+### As you know, I enjoy dabbling in all things visualization and math. I figured a delightful gift for you would be to create a little card telling how much I love you, utilizing some mathiness. I used one of my graphing programs (ggplot2) to generate the message shown below in two ways.
+
+
+
+```{r image_grobs, fig.show = "hold", out.width = "30%", fig.align = "default"}
+
+
+
+knitr::include_graphics("Heart2.svg")
+
+knitr::include_graphics("U.svg")
+
+
+```
+
+
+________________________________________________________________________________
+
+
+```{r fig.show = "hold", out.width = "50%", fig.align = "center"}
+
+
+
+```
+
+```{r fig.show = "hold", out.width = "25%", fig.align = "default"}
+
+knitr::include_graphics("L.svg")
+
+knitr::include_graphics("O.svg")
+
+knitr::include_graphics("V.svg")
+
+knitr::include_graphics("E.svg")
+
+```
+
+```{r fig.show = "hold", out.width = "50%", fig.align = "center"}
+
+
+knitr::include_graphics("U.svg")
+```
+
+### I also wanted to show you another heart I created to express my love.
+
+```{r fig.show = "hold", out.width = "50%", fig.align = "center"}
+
+knitr::include_graphics("Heart1.svg")
+
+```
+
+### These are the equations I used to make the letters and the hearts, with the exception of the I and O, which I created using graph code.
+
+$\LARGE y = \frac{1}{x} \hspace{8cm}$
+```{r fig.show = "hold", out.width = "50%", fig.align = "default"}
+
+knitr::include_graphics("L.svg")
+
+```
+
+
+$\LARGE y=\lvert x\rvert \hspace{8cm}$
+```{r fig.show = "hold", out.width = "50%", fig.align = "default"}
+
+knitr::include_graphics("V.svg")
+
+```
+
+
+$\LARGE x=-3\lvert sin(y)\rvert \hspace{6cm}$
+```{r fig.show = "hold", out.width = "50%", fig.align = "default"}
+
+knitr::include_graphics("E.svg")
+
+```
+
+
+$\begin{align} & \LARGE x=4(3sin(\theta) - sin(3\theta))\\
+&\LARGE y=13cos(\theta) - 5cos(2\theta) - cos(4\theta) \end{align}$
+```{r fig.show = "hold", out.width = "50%", fig.align = "default"}
+
+knitr::include_graphics("Heart1.svg")
+
+```
+
+
+$\LARGE r(\theta) = 2-2sin\theta+sin\theta \frac{\sqrt{\lvert cos\theta \rvert}}{sin\theta + 1.4} \hspace{1.2cm}$
+```{r fig.show = "hold", out.width = "50%", fig.align = "default"}
+
+knitr::include_graphics("Heart2.svg")
+
+```
+
+# With love from your adoring husband,
+
+# David

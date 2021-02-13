@@ -2,7 +2,7 @@
 title: "Happy Valentines Day"
 author: "David M Vermillion"
 date: "2/14/2021"
-output: pdf_document
+output: html_document
 ---
 
 ```{r setup, include=FALSE}
@@ -57,7 +57,7 @@ knitr::include_graphics("U.svg")
 
 ### I also wanted to show you another heart I created to express my love.
 
-```{r fig.show = "hold", out.width = "50%", fig.align = "default"}
+```{r fig.show = "hold", out.width = "50%", fig.align = "center"}
 
 knitr::include_graphics("Heart1.svg")
 
@@ -65,7 +65,7 @@ knitr::include_graphics("Heart1.svg")
 
 ### These are the equations I used to make the letters and the hearts, with the exception of the I and O, which I created using graph code.
 
-$\LARGE y = \frac{1}{x} \hspace{1cm}$
+$\LARGE y = \frac{1}{x} \hspace{8cm}$
 ```{r fig.show = "hold", out.width = "50%", fig.align = "default"}
 
 knitr::include_graphics("L.svg")
@@ -73,7 +73,7 @@ knitr::include_graphics("L.svg")
 ```
 
 
-$\LARGE y=\lvert x\rvert \hspace{3cm}$
+$\LARGE y=\lvert x\rvert \hspace{8cm}$
 ```{r fig.show = "hold", out.width = "50%", fig.align = "default"}
 
 knitr::include_graphics("V.svg")

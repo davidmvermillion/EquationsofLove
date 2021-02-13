@@ -1,9 +1,10 @@
 ---
-title: "Happy Valentines Day"
+title: "Your Nerdy Valentine's Day Card"
 author: "David M Vermillion"
 date: "2/14/2021"
 output: pdf_document
-geometry: margin=1in
+geometry: margin = 0.75in
+fontsize: 12pt
 ---
 
 ```{r setup, include=FALSE}
@@ -14,8 +15,14 @@ knitr::opts_chunk$set(echo = FALSE)
 ### Happy Valentines Day my beloved Shayla!
 
 ### As you know, I enjoy dabbling in all things visualization and math. I figured a delightful gift for you would be to create a little card telling how much I love you, utilizing some mathiness. I used one of my graphing programs (ggplot2) to generate the message shown below in two ways.
-
-
+\
+\
+\
+\
+\
+\
+\
+\
 
 ```{r image_grobs, fig.show = "hold", out.width = "30%", fig.align = "default"}
 
@@ -29,8 +36,14 @@ knitr::include_graphics("U.jpeg")
 ```
 
 
-________________________________________________________________________________
-
+\newpage
+\
+\
+\
+\
+\
+\
+\
 
 ```{r fig.show = "hold", out.width = "50%", fig.align = "center"}
 
@@ -56,6 +69,24 @@ knitr::include_graphics("E.jpeg")
 knitr::include_graphics("U.jpeg")
 ```
 
+\newpage
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+
+\
+\
+\
+
 ### I also wanted to show you another heart I created to express my love.
 
 ```{r fig.show = "hold", out.width = "50%", fig.align = "center"}
@@ -63,10 +94,10 @@ knitr::include_graphics("U.jpeg")
 knitr::include_graphics("Heart1.jpeg")
 
 ```
-
+\newpage
 ### These are the equations I used to make the letters and the hearts, with the exception of the I and O, which I created using graph code.
 
-$\LARGE y = \frac{1}{x} \hspace{8cm}$
+${\LARGE y = \frac{1}{x}}$
 ```{r fig.show = "hold", out.width = "50%", fig.align = "default"}
 
 knitr::include_graphics("L.jpeg")
@@ -74,7 +105,7 @@ knitr::include_graphics("L.jpeg")
 ```
 
 
-$\LARGE y=\lvert x\rvert \hspace{8cm}$
+$\LARGE y=\lvert x\rvert$
 ```{r fig.show = "hold", out.width = "50%", fig.align = "default"}
 
 knitr::include_graphics("V.jpeg")
@@ -82,7 +113,7 @@ knitr::include_graphics("V.jpeg")
 ```
 
 
-$\LARGE x=-3\lvert sin(y)\rvert \hspace{6cm}$
+$\LARGE x=-3\lvert sin(y)\rvert$
 ```{r fig.show = "hold", out.width = "50%", fig.align = "default"}
 
 knitr::include_graphics("E.jpeg")
@@ -99,7 +130,7 @@ knitr::include_graphics("Heart1.jpeg")
 ```
 
 
-$\LARGE r(\theta) = 2-2sin\theta+sin\theta \frac{\sqrt{\lvert cos\theta \rvert}}{sin\theta + 1.4} \hspace{1.2cm}$
+$\LARGE r(\theta) = 2-2sin\theta+sin\theta \frac{\sqrt{\lvert cos\theta \rvert}}{sin\theta + 1.4}$
 ```{r fig.show = "hold", out.width = "50%", fig.align = "default"}
 
 knitr::include_graphics("Heart2.jpeg")

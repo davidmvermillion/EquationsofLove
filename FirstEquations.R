@@ -201,3 +201,6 @@ Heart2Plot
 # https://stackoverflow.com/questions/28748301/how-can-i-left-align-latex-equations-in-r-markdown
 # https://www.overleaf.com/learn/latex/Line_breaks_and_blank_spaces
 # https://texblog.org/2012/08/29/changing-the-font-size-in-latex/
+# https://tex.stackexchange.com/questions/19579/horizontal-line-spanning-the-entire-document-in-latex/19582
+# https://bookdown.org/yihui/rmarkdown-cookbook/pagebreaks.html
+# https://stackoverflow.com/questions/33191744/how-to-add-new-line-in-markdown-presentation#:~:text=When%20you%20do%20want%20to,more%20spaces%2C%20then%20type%20return.&text=How%20to%20add%20new%20line%20in%20Markdown%20presentation%3F,-Check%20the%20following&text=To%20force%20a%20line%20return,the%20end%20of%20a%20line.

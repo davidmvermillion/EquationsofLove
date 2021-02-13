@@ -198,3 +198,6 @@ Heart2Plot
 # https://community.rstudio.com/t/circle-in-ggplot2/8543/3
 # https://community.rstudio.com/t/how-to-stack-two-images-horizontally-in-r-markdown/18941/3
 # https://community.rstudio.com/t/how-to-stack-two-images-horizontally-in-r-markdown/18941/11
+# https://stackoverflow.com/questions/28748301/how-can-i-left-align-latex-equations-in-r-markdown
+# https://www.overleaf.com/learn/latex/Line_breaks_and_blank_spaces
+# https://texblog.org/2012/08/29/changing-the-font-size-in-latex/

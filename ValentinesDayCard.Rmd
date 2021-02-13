@@ -56,31 +56,57 @@ knitr::include_graphics("E.svg")
 knitr::include_graphics("U.svg")
 ```
 
-I also wanted to show you a few hearts I created to expressed my love.
+I also wanted to show you another heart I created to expressed my love.
 
+```{r fig.show = "hold", out.width = "50%", fig.align = "default"}
 
-With love from your amazed husband,
+knitr::include_graphics("Heart1.svg")
 
-David
-
-
-# Code
+```
 
 These are the equations I used to make the letters and the hearts, with the exception of the I and O, which I created using graph code.
 
-### L
-$y = \frac{1}{x}$
+$\LARGE y = \frac{1}{x}$
+```{r fig.show = "hold", out.width = "50%", fig.align = "default"}
 
-### V
-$y=\lvert x\rvert$
+knitr::include_graphics("L.svg")
 
-### E
-$x=-3\lvert sin(y)\rvert$
+```
 
 
-### First Heart
-$x=4(3sin(\theta) - sin(3\theta))$
-$y=13cos(\theta) - 5cos(2\theta) - cos(4\theta)$
+$\LARGE y=\lvert x\rvert$
+```{r fig.show = "hold", out.width = "50%", fig.align = "default"}
 
-### Second Heart
-$r(\theta) = 2-2sin\theta+sin\theta \frac{\sqrt{\lvert cos\theta \rvert}}{sin\theta + 1.4}$
+knitr::include_graphics("V.svg")
+
+```
+
+
+$\LARGE x=-3\lvert sin(y)\rvert$
+```{r fig.show = "hold", out.width = "50%", fig.align = "default"}
+
+knitr::include_graphics("E.svg")
+
+```
+
+
+
+$$\begin{align} \LARGE x=4(3sin(\theta) - sin(3\theta))\\
+\LARGE y=13cos(\theta) - 5cos(2\theta) - cos(4\theta) \end{align}$$
+```{r fig.show = "hold", out.width = "50%", fig.align = "default"}
+
+knitr::include_graphics("Heart1.svg")
+
+```
+
+
+$\LARGE r(\theta) = 2-2sin\theta+sin\theta \frac{\sqrt{\lvert cos\theta \rvert}}{sin\theta + 1.4}$
+```{r fig.show = "hold", out.width = "50%", fig.align = "default"}
+
+knitr::include_graphics("Heart2.svg")
+
+```
+
+With love from your adoring husband,
+
+David

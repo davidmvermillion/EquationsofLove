@@ -9,6 +9,8 @@ fontsize: 12pt
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
+library('here')
+here::i_am('Code/ValentinesDayCard.Rmd')
 ```
 
 
@@ -26,11 +28,11 @@ As you know, I enjoy dabbling in all things visualization and math. I figured a 
 
 ```{r image_grobs, fig.show = "hold", out.width = "30%", fig.align = "default"}
 
-knitr::include_graphics("I.jpeg")
+knitr::include_graphics(here("Images/I.jpeg"))
 
-knitr::include_graphics("Heart2.jpeg")
+knitr::include_graphics(here("Images/Heart2.jpeg"))
 
-knitr::include_graphics("U.jpeg")
+knitr::include_graphics(here("Images/U.jpeg"))
 
 
 ```
@@ -47,26 +49,26 @@ knitr::include_graphics("U.jpeg")
 
 ```{r fig.show = "hold", out.width = "50%", fig.align = "center"}
 
-knitr::include_graphics("I.jpeg")
+knitr::include_graphics(here("Images/I.jpeg"))
 
 ```
 
 ```{r fig.show = "hold", out.width = "25%", fig.align = "default"}
 
-knitr::include_graphics("L.jpeg")
+knitr::include_graphics(here("Images/L.jpeg"))
 
-knitr::include_graphics("O.jpeg")
+knitr::include_graphics(here("Images/O.jpeg"))
 
-knitr::include_graphics("V.jpeg")
+knitr::include_graphics(here("Images/V.jpeg"))
 
-knitr::include_graphics("E.jpeg")
+knitr::include_graphics(here("Images/E.jpeg"))
 
 ```
 
 ```{r fig.show = "hold", out.width = "50%", fig.align = "center"}
 
 
-knitr::include_graphics("U.jpeg")
+knitr::include_graphics(here("Images/U.jpeg"))
 ```
 
 \newpage
@@ -91,7 +93,7 @@ I also wanted to show you another heart I created to express my love.
 
 ```{r fig.show = "hold", out.width = "50%", fig.align = "center"}
 
-knitr::include_graphics("Heart1.jpeg")
+knitr::include_graphics(here("Images/Heart1.jpeg"))
 
 ```
 \newpage
@@ -100,7 +102,7 @@ These are the equations I used to make the letters and the hearts, with the exce
 ${\LARGE y = \frac{1}{x}}$
 ```{r fig.show = "hold", out.width = "50%", fig.align = "default"}
 
-knitr::include_graphics("L.jpeg")
+knitr::include_graphics(here("Images/L.jpeg"))
 
 ```
 
@@ -108,7 +110,7 @@ knitr::include_graphics("L.jpeg")
 $\LARGE y=\lvert x\rvert$
 ```{r fig.show = "hold", out.width = "50%", fig.align = "default"}
 
-knitr::include_graphics("V.jpeg")
+knitr::include_graphics(here("Images/V.jpeg"))
 
 ```
 
@@ -116,7 +118,7 @@ knitr::include_graphics("V.jpeg")
 $\LARGE x=-3\lvert sin(y)\rvert$
 ```{r fig.show = "hold", out.width = "50%", fig.align = "default"}
 
-knitr::include_graphics("E.jpeg")
+knitr::include_graphics(here("Images/E.jpeg"))
 
 ```
 
@@ -125,7 +127,7 @@ $\LARGE x=4(3sin(\theta) - sin(3\theta))\\
 \LARGE y=13cos(\theta) - 5cos(2\theta) - cos(4\theta)$
 ```{r fig.show = "hold", out.width = "50%", fig.align = "default"}
 
-knitr::include_graphics("Heart1.jpeg")
+knitr::include_graphics(here("Images/Heart1.jpeg"))
 
 ```
 
@@ -133,7 +135,7 @@ knitr::include_graphics("Heart1.jpeg")
 $\LARGE r(\theta) = 2-2sin\theta+sin\theta \frac{\sqrt{\lvert cos\theta \rvert}}{sin\theta + 1.4}$
 ```{r fig.show = "hold", out.width = "50%", fig.align = "default"}
 
-knitr::include_graphics("Heart2.jpeg")
+knitr::include_graphics(here("Images/Heart2.jpeg"))
 
 ```
 

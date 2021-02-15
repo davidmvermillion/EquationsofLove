@@ -10,6 +10,7 @@ I chose to use images to nicely align everything. SVGs work fine in HTML. I had 
 I found the [here](https://cran.r-project.org/web/packages/here/vignettes/rmarkdown.html) package to help with directory work within folders.
 
 ### Bibliography
+[Heart Curve](https://mathworld.wolfram.com/HeartCurve.html)\
 [Curve Function](https://www.math.ucla.edu/~anderson/rw1001/library/base/html/curve.html)\
 [Spline Function](https://www.math.ucla.edu/~anderson/rw1001/library/base/html/splinefun.html)\
 [Par Function](https://www.math.ucla.edu/~anderson/rw1001/library/base/html/par.html)\
@@ -28,4 +29,4 @@ I found the [here](https://cran.r-project.org/web/packages/here/vignettes/rmarkd
 [LaTeX Font Sizes](https://texblog.org/2012/08/29/changing-the-font-size-in-latex/)
 [LaTeX Horizontal Lines](https://tex.stackexchange.com/questions/19579/horizontal-line-spanning-the-entire-document-in-latex/19582)\
 [RMarkdown Pagebreaks](https://bookdown.org/yihui/rmarkdown-cookbook/pagebreaks.html)\
-[RMarkdown, Adding a Carriage Return](https://stackoverflow.com/questions/33191744/how-to-add-new-line-in-markdown-presentation#:~:text=When%20you%20do%20want%20to,more%20spaces%2C%20then%20type%20return.&text=How%20to%20add%20new%20line%20in%20Markdown%20presentation%3F,-Check%20the%20following&text=To%20force%20a%20line%20return,the%20end%20of%20a%20line.)\
+[RMarkdown, Adding a Carriage Return](https://stackoverflow.com/questions/33191744/how-to-add-new-line-in-markdown-presentation#:~:text=When%20you%20do%20want%20to,more%20spaces%2C%20then%20type%20return.&text=How%20to%20add%20new%20line%20in%20Markdown%20presentation%3F,-Check%20the%20following&text=To%20force%20a%20line%20return,the%20end%20of%20a%20line.)

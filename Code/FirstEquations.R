@@ -1,5 +1,6 @@
 library(tidyverse)
 
+getwd()
 
 t <- seq(-pi,pi,0.01)
 x <- 16*0.25*(3*sin(t) - sin(3*t))

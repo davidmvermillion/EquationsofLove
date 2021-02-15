@@ -20,7 +20,7 @@ I found the [here](https://cran.r-project.org/web/packages/here/vignettes/rmarkd
 [ggplot2 Axes](http://www.sthda.com/english/wiki/ggplot2-axis-scales-and-transformations)\
 [Creating the Letter U](http://jwilson.coe.uga.edu/emt668/EMAT6680.Folders/Maddox/Maddox.2/Maddox.2.html#:~:text=As%20a%20increases%2C%20the%20sides,a%20is%20equal%20to%20zero.)\
 [ggforce geom_circle()](https://www.rdocumentation.org/packages/ggforce/versions/0.3.2/topics/geom_circle)\
-[circle in ggplot](https://community.rstudio.com/t/circle-in-ggplot2/8543/3)\
+[Circle in ggplot](https://community.rstudio.com/t/circle-in-ggplot2/8543/3)\
 [Stacking Images Horizontally in RMarkdown, 1](https://community.rstudio.com/t/how-to-stack-two-images-horizontally-in-r-markdown/18941/3)\
 [Stacking Images Horizontally in RMarkdown, 2](https://community.rstudio.com/t/how-to-stack-two-images-horizontally-in-r-markdown/18941/11)\
 [Left Aligning LaTeX Equations in RMarkdown](https://stackoverflow.com/questions/28748301/how-can-i-left-align-latex-equations-in-r-markdown)\
